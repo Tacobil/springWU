@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+.wrapper {
+    /* For mobile testing */
+    max-width: 500px;
+    background-color: #1a2238;
+    color: white;
+}
+
+.video-template {
+    border: none;
+    aspect-ratio: 16/9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* MOBILE */
+.mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    background-color: #1a2238;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
