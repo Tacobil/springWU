@@ -1,23 +1,128 @@
+:root {
+    --default-padding: 1rem;
+}
+
 body {
     margin: 0px;
     background-color: black;
-}
-
-.wrapper {
-    /* For mobile testing */
-    max-width: 500px;
-    background-color: #1a2238;
     color: white;
-}
-
-.video-template {
-    border: none;
-    aspect-ratio: 16/9;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+
+header {
+    padding: 0px 1rem;
+    background-color: hotpink;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--default-padding);
+}
+
+
+.logo-link {
+    display:flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.search {
+    margin-left: auto; /* move to right */
+}
+
+.video-section {
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    gap: var(--default-padding);
+}
+
+.video {
+    display:grid;
+    background-color: #1a2238;
+    grid-template-areas:
+    "img h2"
+    "img p";
+}
+
+.video img { grid-area: img; }
+.video h2 { grid-area: h2; background-color: inherit;}
+.video p { grid-area: p; background-color: inherit;}
+
+/* Menu */
+.menu{
+    height: 100vh;
+    left: -100%;
+    background: #1a2238;
+    position: fixed;
+    top: 0;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+    padding: 1em;
+    padding-right: 5em;
+}
+
+.menu-button{
+    cursor: pointer;
+    display: inline;
+    background-color: inherit;
+    color: white;
+    border: none;
+    padding: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.show{
+    left: 0;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
+.menu-list-item {
+    display:flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+
+/* --------------- */
+
+.wrapper {
+    /* For mobile testing */
+    max-width: 500px;
+    background-color: #0f1421
+
+}
+
+.video-template {
+    border: none;
+    aspect-ratio: 16/9;
 }
 
 

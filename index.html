@@ -6,17 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&icon_names=arrow_right,history,home,logout,menu,search,settings&display=block"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrapper-index">
+    <nav class="menu">
+        <button class="menu-button">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <ul>
+            <li>
+                <a class="menu-list-item" href="index.html">
+                    <span class="material-symbols-outlined">home</span>
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a class="menu-list-item" href="">
+                    <span class="material-symbols-outlined">history</span>
+                    <p>History</p>
+                </a>
+            </li>
+            <li>
+                <a class="menu-list-item" href="settings.html">
+                    <span class="material-symbols-outlined">settings</span>
+                    <p>Settings</p>
+                </a>
+            </li>
+            <li>
+                <a class="menu-list-item" href="">
+                    <span class="material-symbols-outlined">logout</span>
+                    <p>Log Out</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="fade-layer"></div>
+
+    <div id="wrapper-index" class="wrapper">
         <header>
-            header
-            <img alt="logo">
-            <!-- icon notifications, popup? -->
-            <!-- icon search -->
+            <button class="menu-button">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <a class="logo-link">
+                <img alt="logo" src="img/logo.png" style="max-width: 50px">
+                <h1>MyTube</h1>
+            </a>
+
+            <span class="material-symbols-outlined search">search</span>
         </header>
+
+        <main>
+            <section class="video-section">
+                <a>
+                    <h1>Followed<span class="material-symbols-outlined">arrow_right</span></h1>
+                </a>
+
+                <a class="video">
+                    <img src="img/placeholder.png" style="max-width:50px">
+                    <h2>AAAAAAAA</h2>
+                    <p>DougDoug</p>
+                </a>
+
+                <a class="video">
+                    <img src="img/placeholder.png" style="max-width:50px">
+                    <h2>AAAAAAAA</h2>
+                    <p>DougDoug</p>
+                </a>
+
+            </section>
+
+            <section class="video-section">
+                <a>
+                    <h1>Recommended</h1>
+                </a>
+            </section>
+
+            <section class="video-section">
+                <a>
+                    <h1>Categories</h1>
+                </a>
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
     </div>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
