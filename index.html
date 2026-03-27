@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&icon_names=arrow_right,history,home,logout,menu,search,settings&display=block"
-        rel="stylesheet">
+    <title>MyTube | Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&icon_names=arrow_right,history,home,logout,menu,search,settings&display=block" rel="stylesheet">
 </head>
 
 <body>
@@ -44,55 +42,90 @@
             </li>
         </ul>
     </nav>
+
     <div class="fade-layer"></div>
 
-    <div id="wrapper-index" class="wrapper">
-        <header>
-            <button class="menu-button">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-            <a class="logo-link">
-                <img alt="logo" src="img/logo.png" style="max-width: 50px">
-                <h1>MyTube</h1>
-            </a>
+    <div class="search">
+        
+    </div>
 
+    <header>
+        <button class="menu-button">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <a href="index.html" class="logo-link">
+            <img alt="logo" src="img/logo.png" style="max-width: 50px">
+            <h1>MyTube</h1>
+        </a>
+        
+        <button class="search-button">
             <span class="material-symbols-outlined search">search</span>
-        </header>
+        </button>
+    </header>
 
+
+    <div id="wrapper-index" class="wrapper">
         <main>
             <section class="video-section">
                 <a>
                     <h1>Followed<span class="material-symbols-outlined">arrow_right</span></h1>
                 </a>
 
-                <a class="video">
-                    <img src="img/placeholder.png" style="max-width:50px">
-                    <h2>AAAAAAAA</h2>
-                    <p>DougDoug</p>
+                <a href="video.html?v=EsWesK8GJIg" class="video video-full">
+                    <img src="https://img.youtube.com/vi/EsWesK8GJIg/maxresdefault.jpg" style="max-width:100%">
+                    <h2>I accidentally bought a sex toy for my employees</h2>
+                    <p class="publisher">DougDoug Clips</p>
+                </a>
+                <a href="video.html?v=mos_0KQswGc" class="video video-full">
+                    <img src="https://img.youtube.com/vi/mos_0KQswGc/maxresdefault.jpg" style="max-width:100%">
+                    <h2>Fatty dragon has a pat</h2>
+                    <p class="publisher">John P</p>
+                </a>
+                <a href="video.html?v=hSZg06T47o8" class="video video-full">
+                    <img src="https://img.youtube.com/vi/hSZg06T47o8/maxresdefault.jpg" style="max-width:100%">
+                    <h2>Fatty dragon has a pat</h2>
+                    <p class="publisher">John P</p>
                 </a>
 
-                <a class="video">
-                    <img src="img/placeholder.png" style="max-width:50px">
-                    <h2>AAAAAAAA</h2>
-                    <p>DougDoug</p>
-                </a>
+
+                <a>View more</a>
 
             </section>
 
             <section class="video-section">
                 <a>
                     <h1>Recommended</h1>
+
+
+                    <a>View more</a>
                 </a>
             </section>
 
             <section class="video-section">
-                <a>
-                    <h1>Categories</h1>
-                </a>
+                <h1>Categories</h1>
+                <div class="category-container">
+                    <div class="category-card">
+                        <a><img src="img/categories/gaming.jpg" class="category-image"></a>
+                        <a>Gaming</a>
+                    </div>
+                    <a>
+                        <div class="category-card">
+                        <a><img src="img/categories/horror.jpg" class="category-image"></a>
+                        <a>Horror</a>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="category-card">
+                            <a><img src="img/categories/gta.jpg" class="category-image"></a>
+                            <a>GTA V</a>
+                        </div>
+                    </a>
+                </div>
             </section>
         </main>
 
         <footer>
+            
 
         </footer>
     </div>
