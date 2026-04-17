@@ -2,6 +2,6 @@
 access thumbnail:
     https://img.youtube.com/vi/EsWesK8GJIg/maxresdefault.jpg
 
-display video:
+video element:
 	<iframe class="video-template" width="100%" height="100%" src="https://www.youtube.com/embed/EsWesK8GJIg"></iframe>
 

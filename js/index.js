@@ -1,16 +1,14 @@
-function toggleMenu() {
-    const menu = document.querySelector("nav.menu")
-    menu.classList.toggle("show")
+const fadeLayer = document.querySelector(".fade-layer")
+const menu = document.querySelector("nav.menu")
+const menuButtons = document.querySelectorAll(".menu-button")
 
-    const fadeLayer = document.querySelector(".fade-layer")
+function toggleMenu() {
+    menu.classList.toggle("show")
     fadeLayer.classList.toggle("visible")
 }
-
-const menuButtons = document.querySelectorAll(".menu-button")
 
 menuButtons.forEach(function (button) {
   button.addEventListener("click", toggleMenu)
 })
 
-const layer = document.querySelector(".fade-layer")
-layer.addEventListener("click", toggleMenu)
+fadeLayer.addEventListener("click", toggleMenu)

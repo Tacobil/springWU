@@ -1,5 +1,5 @@
 :root {
-    --default-padding: 1rem;
+    --mobile-padding: 1rem;
 
     --text-color: #050315;
     --background-color: #fbfbfe;
@@ -14,6 +14,7 @@
 
 footer {
     min-height: 200px;
+    background-color: pink;
 }
 
 body {
@@ -30,9 +31,7 @@ ul {
     list-style: none;
 }
 
-h1 {
-    font-size: 1.5rem;
-}
+
 
 header {
     position: sticky;
@@ -44,7 +43,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--default-padding);
+    gap: var(--mobile-padding);
     border-bottom: var(--line);
 }
 
@@ -66,7 +65,7 @@ header {
     padding: 1rem;
     display:flex;
     flex-direction: column;
-    gap: var(--default-padding);
+    gap: var(--mobile-padding);
     border-bottom: var(--line);
 }
 
@@ -103,30 +102,37 @@ header {
 .category-container {
     display: flex;
     flex-direction: row;
-    gap: calc(var(--default-padding)/2);
+    gap: calc(var(--mobile-padding)/2);
 }
 
-.video img {
+.video-thumbnail {
     grid-area: img;
+    max-width: 100%;
 }
 
-.video h2 { 
+.video-title { 
     grid-area: h2;
-    margin: var(--default-padding);
+    margin: var(--mobile-padding);
     margin-bottom: 5px;
 }
 
-.video .publisher { 
+.video-publisher { 
     grid-area: p;
-    margin: var(--default-padding);
+    margin: var(--mobile-padding);
     margin-top: 0px;
 }
+
+#video-info {
+    padding-left: var(--mobile-padding);
+    padding-right: var(--mobile-padding);
+}
+
 
 /* Menu */
 .menu{
     height: 100vh;
     left: -100%;
-    background: #1a2238;
+    background: white;
     position: fixed;
     top: 0;
     transition: left 0.3s;
