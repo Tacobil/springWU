@@ -157,8 +157,18 @@ nav {
 
 /* Videos */
 .video-container {
+    display: grid;
     grid-area: vc;
-    background-color: #fcfcfc;
+    background-color: #fafafa;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    height:fit-content;
+    column-gap: 10px;
+    row-gap: 24px;
+    padding: 10px
+}
+
+.thumbnail {
+    border-radius: 12px;
 }
 
 .video-info {
@@ -167,123 +177,14 @@ nav {
     "user title"
     "user subtext";
     justify-content: left;
-    padding: 10px;
-}
-
-.video-info .user-icon {
-    margin-right: 10px;
-}
-
-
-/* TO BE DELETED */
-/* video */
-.video-section {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: var(--mobile-padding);
-    border-bottom: var(--line);
-}
-
-.video {
-    display: grid;
-    background-color: var(--secondary-color);
-    border-radius: 0.5rem;
-}
-
-.video-compact {
-    grid-template-areas:
-    "img h2"
-    "img p";
-    grid-template-columns: 1fr 2fr;
-}
-
-.video-full {
-    grid-template-areas:
-    "img"
-    "h2"
-    "p";
-}
-
-.category-card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--secondary-color);
-}
-
-.category-image {
-    width: 100%;
-}
-
-.category-container {
-    display: flex;
-    flex-direction: row;
-    gap: calc(var(--mobile-padding)/2);
-}
-
-.video-thumbnail {
-    grid-area: img;
-    max-width: 100%;
-}
-
-.video-title { 
-    grid-area: h2;
-    margin: var(--mobile-padding);
-    margin-bottom: 5px;
-}
-
-.video-publisher { 
-    grid-area: p;
-    margin: var(--mobile-padding);
-    margin-top: 0px;
-}
-
-#video-info {
-    padding-left: var(--mobile-padding);
-    padding-right: var(--mobile-padding);
-}
-
-
-/* Menu */
-.menu{
-    height: 100vh;
-    left: -100%;
-    background: white;
-    position: fixed;
-    top: 0;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
-    padding: 1em;
-    padding-right: 5em;
-}
-
-
-
-
-button {
-    border: none;
-    background-color: initial;
-    color: white;
-    padding: 0;
-    cursor: pointer;
+    padding-top: 10px;
+    column-gap: 10px;
+    row-gap: 5px;
 }
 
 .menu-button{
     cursor:pointer
 }
-
-
-.fade-layer.visible{
-    display: block;
-}
-
-.menu-list-item {
-    display:flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
 
 /* --------------- */
 
@@ -293,13 +194,14 @@ button {
 
 /* MOBILE */
 @media screen and (max-width:900px) {
-    .sidebar {
-        display: none;
-    }
     .video-container {
         grid-template-areas:
         "nv"
         "vc";
+    }
+
+    .logo-text {
+        display:none;
     }
 
 }
