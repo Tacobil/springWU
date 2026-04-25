@@ -52,9 +52,12 @@ nav {
     gap: 20px;
 }
 
+.user-icon {
+    border-radius: 50%;
+}
+
 .nav-right .user-icon {
     width: 35px;
-    border-radius: 50%;
 }
 
 .nav-center {
@@ -64,14 +67,16 @@ nav {
 }
 
 .searchbar {
-    padding: 0 10px;
+    padding: 0 12px;
 }
 
 .searchbar input {
-    border: none;
+    border: 0;
+    outline: 0;
     background: transparent;
     width: clamp(200px, 40vw, 400px);
 }
+
 
 
 /* video */
@@ -168,17 +173,6 @@ button {
     cursor:pointer
 }
 
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 5;
-}
-
 
 .fade-layer.visible{
     display: block;
@@ -206,7 +200,12 @@ button {
     height: 100vh;
     position: fixed;
     top: 0;
-    padding: 80px 2%;
+    padding: 80px 1.5%;
+    max-width: 200px;
+}
+
+.sidebar hr {
+    margin: 20px 0;
 }
 
 .shortcut-links {
@@ -216,7 +215,6 @@ button {
 }
 
 .shortcut-links a {
-    display: flex;
     gap: 20px;
 }
 
@@ -226,8 +224,31 @@ button {
     background-color: #cccccc;
 }
 
+.subscriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-.small-sidebar a p {
+.subscriptions a {
+    gap: 10px;
+    width: 100%;
+}
+
+.subscriptions a p {
+    width: 70%;
+
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.subscriptions a img {
+    height: 32px;
+}
+
+
+.small-sidebar a p, .small-sidebar b {
     display: none;
 }
 
