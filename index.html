@@ -10,23 +10,26 @@
 
 <body>
     <div id="wrapper-index" class="wrapper">
-        <!-- top navbar -->
+        <!-- Top Navbar -->
         <nav class="flex-div">
-            <div class="nav-left">
-                <img src="img/icons/menu.png" class="icon">
-                <img src="img/logo.png" class="icon">
-                <h1>MyTube</h1>
+            <div class="nav-left flex-div">
+                <a><img src="img/icons/menu.png" class="icon menu-button"></a>
+                <a href="index.html"><img src="img/logo.png" style="max-height: 30px"></a>
             </div>
-            <div class="nav-center">
-                <input type="search">
+            <div class="nav-center flex-div">
+                <div class="searchbar flex-div">
+                    <input type="search" placeholder="Search">
+                    <img src="img/icons/search.svg" class="icon">
+                </div>
             </div>
 
-            <div class="nav-right">
-                <img src="img/portrait.jpg">
+            <div class="nav-right flex-div">
+                <img src="img/icons/notifications.png" class="icon">
+                <img src="img/portrait.jpg" class="user-icon">
             </div>
         </nav>
 
-        <!-- desktop -->
+        <!-- Left Sidebar -->
         <aside class="sidebar">
             <div class="shortcut-links">
                 <a href=""><img src="img/icons/home.png" class="icon"><p>Home</p></a>
@@ -36,11 +39,21 @@
                 <a href=""><img src="img/icons/history.png" class="icon"><p>History</p></a>
                 <a href=""><img src="img/icons/playlist.png" class="icon"><p>Playlist</p></a>
                 <a href=""><img src="img/icons/arrow-down.png" class="icon"><p>Show More</p></a>
+                <hr>
             </div>
+        
+
+            <div class="subscriptions">
+                <b>Subscribed</b>
+                <a href=""><img src="img/portrait.jpg" style="max-height: 30px"><p></p></a>
+            </div>
+
         </aside>
 
-        <!-- left content -->
+        <!-- Main Content -->
         <main>
+
+
             <section class="video-section">
                 <h1>Followed</h1>
                 
@@ -142,8 +155,6 @@
             </li>
         </ul>
     </div>
-
-    <div class="fade-layer"></div>
 
     <script src="js/index.js"></script>
 </body>

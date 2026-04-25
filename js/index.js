@@ -1,14 +1,9 @@
-const fadeLayer = document.querySelector(".fade-layer")
-const menu = document.querySelector("nav.menu")
-const menuButtons = document.querySelectorAll(".menu-button")
+var sidebar = document.querySelector(".sidebar")
+var menuButton = document.querySelector(".menu-button")
 
-function toggleMenu() {
-  menu.classList.toggle("show")
-  fadeLayer.classList.toggle("visible")
+
+function toggleSidebar() {
+  sidebar.classList.toggle("small-sidebar")
 }
 
-menuButtons.forEach(function (button) {
-  button.addEventListener("click", toggleMenu)
-})
-
-fadeLayer.addEventListener("click", toggleMenu)
+menuButton.addEventListener("click", toggleSidebar)
