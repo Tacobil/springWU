@@ -92,6 +92,7 @@ nav {
     outline: 0;
     background: transparent;
     width: clamp(200px, 40vw, 400px);
+    margin-right: 8px;
 }
 
 /* Sidebar */
