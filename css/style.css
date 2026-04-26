@@ -215,7 +215,6 @@ main {
 
 .video-container {
     grid-area: vd;
-    margin: var(--default-spacing);
 }
 
 .video-container hr {
@@ -225,7 +224,7 @@ main {
 video {
     width: 100%;
     aspect-ratio: 16/9;
-    border-radius: var(--default-radius);
+
 }
 
 
@@ -260,6 +259,9 @@ video {
         grid-template-areas: "vd" "vc";
     }
 
+    .video-info, .comment-section {
+        margin: 0 var(--default-spacing);
+    }
 }
 
 /* DESKTOP */
@@ -275,8 +277,13 @@ video {
         grid-template-columns: auto min-content;
         grid-template-areas: "vd vc";
     }
+
     .video-container {
+        margin: var(--default-spacing);
         margin-right: 0;
     }
 
+    video {
+        border-radius: var(--default-radius);
+    }
 }
