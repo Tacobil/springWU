@@ -10,9 +10,6 @@
     --line: 1px solid rgba(0, 0, 0, 0.1);
 
     --main-font: sans-serif;
-
-
-    --sidebar-width: 200px;
 }
 
 
@@ -45,6 +42,7 @@ ul {
     grid-template-areas:
     "nv nv"
     "sb vc";
+    grid-template-columns: auto 1fr;
 }
 
 /* Top Navitation */
@@ -99,11 +97,13 @@ nav {
 /* Sidebar */
 .sidebar {
     grid-area: sb;
-    background-color: #ffffff7e;
+    background-color: #ffffff;
     height: 100vh;
     position: sticky;
-    top: 0;
+    top: 59px;
     padding: 20px;
+    transition: transform 0.2s;
+    z-index: 3;
 }
 
 .sidebar hr {
@@ -149,11 +149,18 @@ nav {
     height: 32px;
 }
 
-
-.small-sidebar a p, .small-sidebar b {
-    display: none;
-    width: fit-content;
+.fade-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none
 }
+
+
+
+
 
 /* Videos */
 .video-container {
@@ -193,15 +200,23 @@ nav {
 
 
 /* MOBILE */
-@media screen and (max-width:900px) {
-    .video-container {
-        grid-template-areas:
-        "nv"
-        "vc";
+@media screen and (max-width:800px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    .toggle-sidebar {
+        transform: translateX(0);
     }
 
     .logo-text {
         display:none;
+    }
+
+    .show {
+        display: block;
     }
 
 }
@@ -209,6 +224,10 @@ nav {
 /* DESKTOP */
 
 
-@media screen and (min-width:901px) {
-    
+@media screen and (min-width:801px) {
+    .toggle-sidebar a p, .toggle-sidebar b {
+        display: none;
+        width: fit-content;
+    }
+
 }
