@@ -2,89 +2,122 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MyTube | Flower Watering in 4K</title>
 </head>
 
 <body>
-	<nav class="menu">
-        <button class="menu-button">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-
-        <ul>
-            <li>
-                <a class="menu-list-item" href="index.html">
-                    <span class="material-symbols-outlined">home</span>
-                    <p>Home</p>
+    <div id="wrapper-video" class="wrapper">
+        <!-- Top Navbar -->
+        <nav class="flex-div">
+            <div class="nav-left flex-div">
+                <img src="img/icons/menu.svg" class="icon menu-button">
+                <a href="index.html" class="flex-div">
+                    <img src="img/logo.png" style="max-height: 30px">
+                    <h1 class="logo-text">MyTube</h1>
                 </a>
-            </li>
-            <li>
-                <a class="menu-list-item" href="">
-                    <span class="material-symbols-outlined">history</span>
-                    <p>History</p>
-                </a>
-            </li>
-            <li>
-                <a class="menu-list-item" href="settings.html">
-                    <span class="material-symbols-outlined">settings</span>
-                    <p>Settings</p>
-                </a>
-            </li>
-            <li>
-                <a class="menu-list-item" href="">
-                    <span class="material-symbols-outlined">logout</span>
-                    <p>Log Out</p>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="fade-layer"></div>
+            </div>
+            <div class="nav-center flex-div">
+                <div class="searchbar flex-div">
+                    <input type="search" placeholder="Search">
+                    <a href="" class="flex-div"><img src="img/icons/search.svg" class="icon"></a>
+                </div>
+            </div>
 
-	<header>
-		<button class="menu-button">
-			<span class="material-symbols-outlined">menu</span>
-		</button>
-		<a href="index.html" class="logo-link">
-			<img alt="logo" src="img/logo.png" style="max-width: 50px">
-			<h1>MyTube</h1>
-		</a>
-		
-		<button class="search-button">
-			<span class="material-symbols-outlined search">search</span>
-		</button>
-	</header>
+            <div class="nav-right flex-div">
+                <a href=""><img src="img/icons/notifications.svg" class="icon"></a>
+                <a href=""><img src="img/users/octopus.jpg" class="user-icon"></a>
+            </div>
+        </nav>
 
-	<div id="wrapper-video" class="wrapper">
-		<div id="video-container">
-			<iframe class="video-template" width="100%" height="100%" src=""></iframe>
-		</div>
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="shortcut-links">
+                <a href="index.html" class="flex-div"><img src="img/icons/home.svg" class="icon"><p>Home</p></a>
+                <a href="" class="flex-div"><img src="img/icons/explore.svg" class="icon"><p>Explore</p></a>
+                <a href="" class="flex-div"><img src="img/icons/premium.svg" class="icon"><p>Premium</p></a>
+                <a href="" class="flex-div"><img src="img/icons/subscriptions.svg" class="icon"><p>Subscriptions</p></a>
+                <a href="" class="flex-div"><img src="img/icons/history.svg" class="icon"><p>History</p></a>
+                <a href="" class="flex-div"><img src="img/icons/playlist.svg" class="icon"><p>Playlist</p></a>
+                <a href="" class="flex-div"><img src="img/icons/arrow-down.svg" class="icon"><p>Show More</p></a>
+            </div>
+            
+            <hr>
 
-        <div id="video-info">
-            <h1 id="video-title"></h1>
-            <p id="video-publisher"></p>
-            <p id="video-description"></p>
-            <p id="video-views"></p>
-            <p id="video-date"></p>
-        </div>
+            <div class="subscriptions">
+                <b>Subscriptions</b>
+                <a href="" class="flex-div"><img src="img/users/cool-cat.jpg" class="user-icon"><p>Cool Cat</p></a>
+                <a href="" class="flex-div"><img src="img/users/christian-buehner.jpg" class="user-icon"><p>Christian Buehner</p></a>
+                <a href="" class="flex-div"><img src="img/users/grandma.jpg" class="user-icon"><p>The Internet Grandma</p></a>
+                <a href="" class="flex-div"><img src="img/users/ian-dooley.jpg" class="user-icon"><p>Ian Dooley</p></a>
+                <a href="" class="flex-div"><img src="img/users/kelly-sikkema.jpg" class="user-icon"><p>Kelly Sikkema</p></a>
+            </div>
+
+        </aside>
         
+        <div class="fade-layer"></div>
 
-		
-		<div id="comment-section">
-			<h1>Comments</h1>
+        <!-- Main Content -->
+        <main>
+            <div class="video-container">
+                <video controls autoplay>
+                    <source src="img/sample.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <a href="channel.html" style="grid-area:user"><img src="img/users/grandma.jpg" class="user-icon"></a>
+                    <h2 style="grid-area:title">Flower Watering In Full HD</h2>
+                    <p style="grid-area:subtext">The Internet Grandma - 1 337 views - uploaded 2015-08-30</p>
+                </div>
+                <hr>
+                <section class="comment-section">
+                    <h2>Comments</h2>
+                    <div class="comment">
 
-			<input type="text" value="">
-			<input type="submit" value="Send">
+                    </div>
+                </section>
+            </div>
 
-			<div class="comment">
-				<h2 class="user"></h2>
-                <p class="comment-text"></p>
-			</div>
-		</div>
-        
-	</div>
+            <div class="video-feed-container">
+                <div>
+                    <a href="video.html"><img src="img/thumbnails/pyramid.jpg" class="thumbnail"></a>
+                    <div class="video-info">
+                        <a href="channel.html" style="grid-area:user;"><img src="img/portrait.jpg" class="user-icon"></a>
+                        <a href="video.html" style="grid-area:title"><h3>Omegle Last Man Standing 3</h3></a>
+                        <p style="grid-area:subtext;">Family Friendly - 562 259 views - uploaded 16 hours ago</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="video.html"><img src="img/thumbnails/pyramid.jpg" class="thumbnail"></a>
+                    <div class="video-info">
+                        <a href="channel.html" style="grid-area:user;"><img src="img/portrait.jpg" class="user-icon"></a>
+                        <a href="video.html" style="grid-area:title"><h3>Omegle Last Man Standing 3</h3></a>
+                        <p style="grid-area:subtext;">Family Friendly - 562 259 views - uploaded 16 hours ago</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="video.html"><img src="img/thumbnails/pyramid.jpg" class="thumbnail"></a>
+                    <div class="video-info">
+                        <a href="channel.html" style="grid-area:user;"><img src="img/portrait.jpg" class="user-icon"></a>
+                        <a href="video.html" style="grid-area:title"><h3>Omegle Last Man Standing 3</h3></a>
+                        <p style="grid-area:subtext;">Family Friendly - 562 259 views - uploaded 16 hours ago</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="video.html"><img src="img/thumbnails/pyramid.jpg" class="thumbnail"></a>
+                    <div class="video-info">
+                        <a href="channel.html" style="grid-area:user;"><img src="img/portrait.jpg" class="user-icon"></a>
+                        <a href="video.html" style="grid-area:title"><h3>Omegle Last Man Standing 3</h3></a>
+                        <p style="grid-area:subtext;">Family Friendly - 562 259 views - uploaded 16 hours ago</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
-    <script src="js/video.js"></script>
+
 </html>
