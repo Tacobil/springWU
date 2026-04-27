@@ -6,5 +6,6 @@ function toggleSidebar() {
   sidebar.classList.toggle("toggle-sidebar")
   fadeLayer.classList.toggle("show")
 }
+
 fadeLayer.addEventListener("click", toggleSidebar)
 menuButton.addEventListener("click", toggleSidebar)
