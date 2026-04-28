@@ -1,12 +1,4 @@
 :root {
-    --mobile-padding: 1rem;
-
-    --text-color: #050315;
-    --background-color: #fbfbfe;
-    --primary-color: #2f27ce;
-    --secondary-color: #dedcff;
-    --accent-color: #433bff;
-
     --default-radius: 10px;
     --default-spacing: 16px;
 }

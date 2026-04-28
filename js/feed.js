@@ -82,7 +82,7 @@ const videos = [
     published: "2023-01-23",
   },
   {
-    title: "Don't Believe The Earth Is Flat? Wrong.",
+    title: "Don't Believe The Earth Is Flat? This will change your mind",
     publisher: users.ianDooley,
     thumbnail: "img/thumbnails/earth.jpg",
     description: ". . .",
