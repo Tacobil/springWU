@@ -35,6 +35,10 @@ hr {
     height: 1px;
 }
 
+main {
+    grid-area: mn;
+}
+
 .flex-div {
     display: flex;
     align-items: center;
@@ -62,9 +66,9 @@ nav {
     
     justify-content: space-between;
 
-    z-index: 5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: white;
+    z-index: 5;
 }
 
 
@@ -99,7 +103,7 @@ nav {
     border: 0;
     outline: 0;
     background: transparent;
-    width: clamp(200px, 40vw, 400px);
+    width: 30vw;
     margin-right: 8px;
 }
 
@@ -113,11 +117,12 @@ nav {
     background-color: #ffffff;
     height: 100vh;
     position: sticky;
-    top: 59px;
+    top: 58px;
     padding: 20px;
     transition: transform 0.2s;
-    z-index: 2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: min-content;
+    z-index: 4;
 }
 
 .sidebar hr {
@@ -168,13 +173,10 @@ nav {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
     display: none
 }
 
-main {
-    grid-area: mn;
-}
+
 
 /* Videos */
 .video-feed-container {
@@ -194,7 +196,7 @@ main {
     max-width: 100%;
 }
 
-.video-info {
+.info {
     display: grid;
     grid-template-areas:
     "user title"
@@ -203,6 +205,18 @@ main {
     padding-top: 10px;
     column-gap: 10px;
     row-gap: 5px;
+}
+
+.info .user-icon {
+    grid-area: user;
+}
+
+.info .title {
+    grid-area: title;
+}
+
+.info .subtext {
+    grid-area: subtext;
 }
 
 
@@ -227,10 +241,31 @@ video {
 
 }
 
+/* Channel */
 
+.button {
+    grid-area: button;
+}
 
-/* --------------- */
+#wrapper-channel .info {
+    grid-template-areas: 
+    "user title"
+    "user subtext"
+    "user button";
+    height: min-content
+}
 
+#wrapper-channel .user-icon {
+
+}
+
+.channel-top .banner {
+    max-width: 100%;
+}
+
+.channel-top {
+    /* margin: 0 10%; */
+}
 
 
 
@@ -259,14 +294,12 @@ video {
         grid-template-areas: "vd" "vc";
     }
 
-    .video-info, .comment-section {
+    #wrapper-video .info, .comment-section {
         margin: 0 var(--default-spacing);
     }
 }
 
 /* DESKTOP */
-
-
 @media screen and (min-width:901px) {
     .toggle-sidebar a p, .toggle-sidebar b {
         display: none;

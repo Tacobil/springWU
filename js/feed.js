@@ -109,8 +109,8 @@ function addVideo(data, index, array) {
   const clone = template.cloneNode(true)
   const thumbnail = clone.querySelector(".thumbnail")
   const userIcon = clone.querySelector(".user-icon")
-  const title = clone.querySelector(".video-title")
-  const subText = clone.querySelector(".video-subtext")
+  const title = clone.querySelector(".title")
+  const subText = clone.querySelector(".subtext")
 
   thumbnail.src = data.thumbnail
   userIcon.src = data.publisher.source
