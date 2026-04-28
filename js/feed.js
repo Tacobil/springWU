@@ -37,6 +37,7 @@ const videos = [
       title: "Okay, But How Were the Pyramids Actually Built?",
       publisher: users.christianBuehner,
       thumbnail: "img/thumbnails/pyramid.jpg",
+      alt: "Pyramid",
       description: ". . .",
       views: "32 259",
       published: "2025-03-02",
@@ -45,6 +46,7 @@ const videos = [
       title: "Did We Really Land On the Moon?",
       publisher: users.me,
       thumbnail: "img/thumbnails/moon-landing.jpg",
+      alt: "Moon Landing",
       description: ". . .",
       views: "69 420",
       published: "2022-06-05",
@@ -53,6 +55,7 @@ const videos = [
       title: "This Cat Wont Stop Sleeping On My Front Porch",
       publisher: users.coolCat,
       thumbnail: "img/thumbnails/eepy-cat.jpg",
+      alt: "Sleepy Cat",
       description: ". . .",
       views: "743",
       published: "5 minutes ago",
@@ -61,6 +64,7 @@ const videos = [
       title: "This Is How You Become a Pro Web Designer",
       publisher: users.kellySikkema,
       thumbnail: "img/thumbnails/front-end.jpg",
+      alt: "Front end developing",
       description: ". . .",
       views: "5.2 million",
       published: "2023-01-23",
@@ -69,6 +73,7 @@ const videos = [
     title: "You Will Never Eat Fast Food Again After Watching This Video",
     publisher: users.ianDooley,
     thumbnail: "img/thumbnails/fast-food.jpg",
+    alt: "Fast food",
     description: ". . .",
     views: "38 million",
     published: "2021-01-23",
@@ -77,6 +82,7 @@ const videos = [
     title: "Grandma's Homemade Cookies Recipe",
     publisher: users.grandma,
     thumbnail: "img/thumbnails/cookies.jpg",
+    alt: "Cookies",
     description: ". . .",
     views: "1 million",
     published: "2023-01-23",
@@ -85,6 +91,7 @@ const videos = [
     title: "Don't Believe The Earth Is Flat? This will change your mind",
     publisher: users.ianDooley,
     thumbnail: "img/thumbnails/earth.jpg",
+    alt: "Earth",
     description: ". . .",
     views: "69 420",
     published: "2022-06-05",
@@ -93,6 +100,7 @@ const videos = [
     title: "Watering Flowers In Full HD",
     publisher: users.grandma,
     thumbnail: "img/thumbnails/water-lily.jpg",
+    alt: "Water Lily",
     description: ". . .",
     views: "1 337",
     published: "2015-08-30",
@@ -113,7 +121,11 @@ function addVideo(data, index, array) {
   const subText = clone.querySelector(".subtext")
 
   thumbnail.src = data.thumbnail
+  thumbnail.alt = data.alt
+
   userIcon.src = data.publisher.source
+  userIcon.alt = data.publisher.name
+  
   title.textContent = data.title
   subText.textContent = data.publisher.name + " - " + data.views + " views - uploaded " + data.published
     
